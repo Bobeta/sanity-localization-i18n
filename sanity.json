@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "project": {
+    "name": "localizedcms"
+  },
+  "api": {
+    "projectId": "",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/dashboard",
+    "@sanity/desk-tool",
+    "language-switcher",
+    "google-analytics",
+    "dashboard-widget-notes",
+    "dashboard-widget-netlify",
+    "dashboard-widget-document-list",
+    "media",
+    "asset-source-fiona-placeholder",
+    "@sanity/color-input",
+    "asset-source-unsplash",
+    "@andre-brdoch/sanity-plugin-schema-inspector",
+    "duplicate-array-item",
+    "@sanity/production-preview",
+    "visual-options",
+    "asset-source-ogimage",
+    "content-calendar"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
+    },
+    {
+      "name": "part:@sanity/base/new-document-structure",
+      "path": "./newDocumentStructure.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
+    },
+    {
+      "implements": "part:@sanity/base/document-actions/resolver",
+      "path": "resolveDocumentActions.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "styling.css"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./parts/brandLogo.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./parts/assetSources.js"
+    },
+    {
+      "name": "part:language-switcher/config",
+      "path": "./parts/languageSwitcherConfig.js"
+    },
+    {
+      "name": "part:@sanity/language-filter/config",
+      "path": "./parts/languageFilterConfig.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./parts/dashboardConfig.js"
+    }
+  ]
+}

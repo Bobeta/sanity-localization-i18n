@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+:root {
+  --brand-primary: #5BA5E5;
+  --font-family-base: 'Proxima Nova';
+  --main-navigation-color: #0F1A25;
+}
+
+
+:global([class*="DefaultFieldset_content_"]) {
+  padding-left: 0 !important;
+  border-left: 0 !important;
+}
+
+:global([class*="DefaultLabel_level_2_"]) {
+  font-weight: 400;
+} 

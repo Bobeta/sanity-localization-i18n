@@ -1,0 +1,72 @@
+/* @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('/static/SourceSansPro-Regular.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''), url('/static/SourceSansPro-Semibold.otf') format('otf');
+} */
+
+.root {
+    background: #0faf;
+    position: relative;
+    padding: 10rem 15rem 20rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* font-family: 'Source Sans Pro', -apple-system, sans-serif; */
+}
+
+.content {
+    background: white;
+    border-radius: 8px;
+}
+
+.root h1,
+.root p {
+    position: relative;
+    z-index: 1;
+}
+
+.root h1 {
+    font-size: 64px;
+    max-width: 860px;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.root p {
+    font-size: 32px;
+    line-height: 1.4;
+    max-width: 700px;
+    margin: 20px 0 0;
+}
+
+.logo {
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+    bottom: 30px;
+}
+
+.logo svg {
+    display: block;
+    width: 250px;
+}
+
+.bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
